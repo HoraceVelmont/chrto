@@ -1,0 +1,31 @@
+create database mydb default character set euckr;
+
+use mydb;
+
+DROP TABLE IF EXISTS tblRegister;
+
+CREATE TABLE tblRegister(
+	id VARCHAR(20) NOT NULL,
+	passwd VARCHAR(20) NOT NULL,
+	name CHAR(20) NULL,
+	num1 CHAR(7) NULL,
+	num2 CHAR(7) NULL,
+	email VARCHAR(30) NULL,
+	phone VARCHAR(30) NULL,
+	zipcode CHAR(7) NULL,
+	address VARCHAR(60) NULL,
+	job VARCHAR(30) NULL,
+	PRIMARY KEY (`id`)
+);
+
+
+
+insert into tblRegister values ('abc', '1111', '홍길동', '1234567', '1234567', 'hong@seoil.ac.kr', '010-1111-11111', '111-111', '하와이', '프로그래머');
+
+insert into tblRegister values ('aaa', '1111', '허균', '1234567', '1234567', 'sun@seoil.ac.kr', '010-2222-2222', '222-222', '길동', '디자이너');
+                                            
+insert into tblRegister values ('bbb', '1111', '이순신', '1234567', '1234567', 'lee@seoil.ac.kr', '010-3333-3333', '333-333', '상계동', '학생');
+                                            
+insert into tblRegister values ('ccc', '1111', '김구', '1234567', '1234567', 'shin@seoil.ac.kr', '010-4444-4444', '444-444', '인천', '교사');
+                                            
+insert into tblRegister values ('ddd', '1111', '안중근', '1234567', '1234567', 'jung@seoil.ac.kr', '010-5555-5555', '555-555', '광주', '회사원');
